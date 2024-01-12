@@ -19,4 +19,4 @@ Welcome to my Python Learning & Collaboration Hub! 🐍 This repository document
 3. **Collaboration**: Reach out if you're interested in partnering on coding projects.
 4. **LinkedIn**: Connect with me on [LinkedIn](https://www.linkedin.com/in/albert-portas-avelli-16212b279) for professional networking.
 
-**🌐 Let's Learn and Collaborate in Python!** try out
+**🌐 Let's Learn and Collaborate in Python!** 
