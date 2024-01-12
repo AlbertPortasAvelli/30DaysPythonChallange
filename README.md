@@ -3,7 +3,7 @@
 Welcome to my Python Learning & Collaboration Hub! 🐍 This repository documents my journey through the 30 Days of Python Challenge, showcasing my progress and openness to collaboration.
 
 **🔍 What's Inside:**
-- **[Practices Folder](./practices)**: Daily exercises showcasing my learning journey.
+- **[Practices Folder](./practices)**: Daily exercises showcasing my learning journey.sadadada
 - **[Theory Folder](./theory)**: My notes i take of every day of learning.
 - **Open for Collaboration**: Seeking partners for coding projects and collaborative learning.
 - **LinkedIn Profile**: Connect with me professionally for potential opportunities.
