@@ -11,12 +11,12 @@ Welcome to my Python Learning & Collaboration Hub! 🐍 This repository document
 **💡 Why Explore This Repository:**
 - **Learning & Collaboration**: Witness my growth and openness to collaboration.
 - **Seeking Partners**: Explore collaboration opportunities on coding projects.
-- **Professional Networking**: [Connect with me on LinkedIn](www.linkedin.com/in/albert-portas-avelli-16212b279) for potential collaborations.
+- **Professional Networking**: [Connect with me on LinkedIn](https://www.linkedin.com/in/albert-portas-avelli-16212b279) for potential collaborations.
 
 **👩‍💻 How to Explore:**
 1. **Challenges**: Dive into the "[practices](./practices)" folder for daily coding exercises.
 2. **Projects**: Explore the "[Theory](./theory)" folder to see my notes.
 3. **Collaboration**: Reach out if you're interested in partnering on coding projects.
-4. **LinkedIn**: Connect with me on [LinkedIn](www.linkedin.com/in/albert-portas-avelli-16212b279) for professional networking.
+4. **LinkedIn**: Connect with me on [LinkedIn](https://www.linkedin.com/in/albert-portas-avelli-16212b279) for professional networking.
 
 **🌐 Let's Learn and Collaborate in Python!**
