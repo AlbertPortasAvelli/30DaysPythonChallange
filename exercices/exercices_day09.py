@@ -106,16 +106,14 @@ person={
  * Check if the person dictionary has skills key, if so check if the person has 'Python' skill and print out the result.
  * If a person skills has only JavaScript and React, print('He is a front end developer'), if the person skills has Node, Python, MongoDB, print('He is a backend developer'), if the person skills has React, Node and MongoDB, Print('He is a fullstack developer'), else print('unknown title') - for more accurate results more conditions can be nested!
  * If the person is married and if he lives in Finland, print the information in the following format:
-'''if 'skills' in person:
-    # Print the middle skill in the skills list
-skills = person['skills']
-if len(skills) > 0:
-    middle_index = len(skills) // 2
-    print(f"Middle skill in the skills list: {skills[middle_index]}")
+'''
+if 'skills' in person:
+    skills = person['skills']
+    if len(skills) > 0:
+        middle_index = len(skills) // 2
+        print(f"Middle skill in the skills list: {skills[middle_index]}")
     if 'Python' in skills:
         print("The person has 'Python' skill.")
-
-    # Check for developer title based on skills
     if skills == ['JavaScript', 'React']:
         print("He is a front end developer")
     elif set(['Node', 'Python', 'MongoDB']).issubset(set(skills)):
