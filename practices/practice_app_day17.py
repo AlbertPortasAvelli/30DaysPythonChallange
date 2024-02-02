@@ -1,40 +1,42 @@
-def add_user(users, name, age):
+def add_costume(costumes, name, theme, accessories):
     try:
-        if not isinstance(age, int) or age < 0:
-            raise ValueError("Age must be a non-negative integer.")
-        
-        users.append({'name': name, 'age': age})
-        print(f"User '{name}' added successfully.")
+        if not theme:
+            raise ValueError("A costume must have a theme.")
+
+        costume_details = {'name': name, 'theme': theme, 'accessories': accessories}
+        costumes.append(costume_details)
+        print(f"🎉 Costume '{name}' added successfully for the '{theme}' theme with accessories: {accessories}!")
 
     except ValueError as ve:
-        print(f"Error: {ve}")
+        print(f"🚨 Error: {ve}")
     except Exception as e:
-        print(f"An unexpected error occurred: {e}")
+        print(f"🎭 An unexpected error occurred: {e}")
 
-def display_users(users):
+def display_costumes(costumes):
     try:
-        if not users:
-            raise ValueError("No users to display.")
+        if not costumes:
+            raise ValueError("No costumes to display. The carnival needs more flair!")
 
-        print("List of Users:")
-        for index, user in enumerate(users, start=1):
-            print(f"{index}. {user['name']} - {user['age']} years old")
+        print("🎭 Carnival Costume Extravaganza:")
+        for index, costume in enumerate(costumes, start=1):
+            accessories = ', '.join(costume['accessories']) if 'accessories' in costume else 'None'
+            print(f"{index}. {costume['name']} - Theme: {costume['theme']} - Accessories: {accessories}")
 
     except ValueError as ve:
-        print(f"Error: {ve}")
+        print(f"🚨 Error: {ve}")
     except Exception as e:
-        print(f"An unexpected error occurred: {e}")
+        print(f"🎭 An unexpected error occurred: {e}")
 
 def main():
-    users = []
+    costumes = []
 
-    # Adding users
-    add_user(users, "Alice", 25)
-    add_user(users, "Bob", 30)
-    add_user(users, "Charlie", "InvalidAge")  # This will trigger an error
+    # Adding costumes with packing
+    add_costume(costumes, "Star Performer", "Galactic Glam", ["Sparkling Wand", "Shining Crown"])
+    add_costume(costumes, "Safari Explorer", "Wild Safari", ["Explorer Hat", "Binoculars"])
+    add_costume(costumes, "Mystery Magician", "", [])  # Oops, someone forgot the theme!
 
-    # Displaying users
-    display_users(users)
+    # Displaying costumes with unpacking and zip
+    display_costumes(costumes)
 
 if __name__ == "__main__":
     main()
