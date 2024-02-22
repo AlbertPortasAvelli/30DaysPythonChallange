@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link
+      rel="stylesheet"
+      href="C:\Users\alber\Documents\DocumentsAlbert\CV\Linkedin projects\avances\practices\practice_app_day27\templates\static\css\styles.css"
+    />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent Games</title>
+</head>
+<body>
+    <h1>Rent Games</h1>
+    <form action="/rent" method="POST">
+        <label for="renter_name">Renter's Name:</label>
+        <input type="text" id="renter_name" name="renter_name" oninput="searchMembers(this.value)">
+        <div id="prediction_list"></div>
+        <br>
+        <label for="rental_days">Rental Days:</label>
+        <input type="number" id="rental_days" name="rental_days" min="1" value="1">
+        <br><br>
+        <label>Select games to rent:</label><br>
+        {% for game in available_games %}
+            <input type="checkbox" id="{{ game._id }}" name="game" value="{{ game._id }}">
+            <label for="{{ game._id }}">{{ game.title }}</label><br>
+        {% endfor %}
+        <br><br>
+        <h2>Rented Games</h2>
+        {% if unavailable_games %}
+            <ul id="rented_games">
+                {% for game in unavailable_games %}
+                    <li>
+                        <strong>Name:</strong> {{ game.title }}<br>
+                        <strong>Platform:</strong> {{ game.platform }}<br>
+                        <strong>Genre:</strong> {{ game.genre }}<br>
+                        <strong>Rating:</strong> {{ game.rating }}<br>
+                        <strong>Description:</strong> {{ game.description }}<br>
+                        <strong>Time Left for Return:</strong> {{ game.time_left }}<br>
+                        <img src="{{ game.image }}" alt="Game Image" width="100"><br>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No games currently rented.</p>
+        {% endif %}
+        <br>
+        <button type="submit">Rent Games</button>
+    </form>
+
+    <script>
+        function searchMembers(name) {
+            fetch(`/search_members?name=${name}`)
+                .then(response => response.json())
+                .then(data => {
+                    const predictionList = document.getElementById('prediction_list');
+                    predictionList.innerHTML = '';
+                    data.forEach(member => {
+                        const listItem = document.createElement('div');
+                        listItem.textContent = `${member.name} ${member.surname}`;
+                        predictionList.appendChild(listItem);
+                    });
+                });
+        }
+    </script>
+</body>
+</html>

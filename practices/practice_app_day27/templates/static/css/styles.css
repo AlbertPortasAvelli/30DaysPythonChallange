@@ -1,0 +1,70 @@
+/* Style for all h1 elements */
+h1 {
+    color: #333;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+/* Style for all labels */
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Style for all input fields */
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+/* Style for the submit button */
+input[type="submit"],
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Style for the unordered list */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Style for list items */
+li {
+    margin-bottom: 10px;
+}
+
+/* Style for the rented games list */
+#rented_games {
+    margin-top: 20px;
+}
+
+/* Style for the rented game list items */
+#rented_games li {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+/* Style for the image within the rented game list */
+#rented_games img {
+    width: 100px;
+    height: auto;
+    display: block;
+    margin-top: 10px;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Game</title>
+</head>
+<body>
+    <h1>Add Game</h1>
+    <form method="post">
+        <label for="game_title">Title:</label><br>
+        <input type="text" id="game_title" name="game_title" required><br><br>
+
+        <label for="game_platform">Platform:</label><br>
+        <input type="text" id="game_platform" name="game_platform" required><br><br>
+
+        <label for="game_genre">Genre:</label><br>
+        <input type="text" id="game_genre" name="game_genre" required><br><br>
+
+        <label for="game_rating">Rating:</label><br>
+        <input type="text" id="game_rating" name="game_rating" required><br><br>
+
+        <label for="game_description">Description:</label><br>
+        <textarea id="game_description" name="game_description" rows="4" required></textarea><br><br>
+
+        <label for="game_image">Image URL:</label><br>
+        <input type="text" id="game_image" name="game_image" required><br><br>
+
+        <input type="submit" value="Add Game">
+    </form>
+</body>
+</html>
